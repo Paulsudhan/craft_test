@@ -4,6 +4,8 @@ app_publisher = "craftinteractive"
 app_description = "craftinteractive"
 app_email = "craftinteractive@gmail.com"
 app_license = "mit"
+required_apps = ["frappe/hrms"]
+
 # required_apps = []
 
 # Includes in <head>
@@ -28,7 +30,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Appraisal Cycle" : "public/js/appraisal_cycle.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -114,9 +116,10 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Appraisal Cycle": "craftinteractive.craftinteractive.doctype.party.party.AppraisalCycle",
+	# "Appraisal Cycle": "craftinteractive.overrides.party.set_employees"
+}
 
 # Document Events
 # ---------------
